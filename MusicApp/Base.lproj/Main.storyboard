@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w4K-2k-75K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TJm-LJ-NX4">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound - Question App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5l-mQ-Pdy">
-                                <rect key="frame" x="20" y="114" width="374" height="40"/>
+                                <rect key="frame" x="20" y="158" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RcH-0d-aW2"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                 <size key="shadowOffset" width="2" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer questions and have fun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyY-gz-s9h">
-                                <rect key="frame" x="10" y="164" width="394" height="40"/>
+                                <rect key="frame" x="10" y="208" width="394" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Na8-hq-0mM"/>
                                 </constraints>
@@ -39,34 +39,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domains" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7J-7F-3Ok">
-                                <rect key="frame" x="10" y="322" width="394" height="38"/>
+                                <rect key="frame" x="10" y="366" width="394" height="38"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akx-Ry-HGe">
-                                <rect key="frame" x="40" y="410" width="334" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="geography" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akx-Ry-HGe">
+                                <rect key="frame" x="40" y="454" width="334" height="50"/>
                                 <color key="backgroundColor" red="0.8514554795" green="0.73688998289999996" blue="0.98410744859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="X8Z-UU-DJz"/>
                                 </constraints>
                                 <state key="normal" title="Geography"/>
+                                <connections>
+                                    <action selector="onDomainClick:" destination="w4K-2k-75K" eventType="touchUpInside" id="PTA-BO-koy"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smo-Im-v9K">
-                                <rect key="frame" x="40" y="480" width="334" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="math" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smo-Im-v9K">
+                                <rect key="frame" x="40" y="524" width="334" height="50"/>
                                 <color key="backgroundColor" red="0.8514554795" green="0.73688998289999996" blue="0.98410744859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Oom-Ic-Ea4"/>
                                 </constraints>
                                 <state key="normal" title="Math"/>
+                                <connections>
+                                    <action selector="onDomainClick:" destination="w4K-2k-75K" eventType="touchUpInside" id="54c-zv-O9m"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwX-Ww-6YJ">
-                                <rect key="frame" x="40" y="550" width="334" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="button" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwX-Ww-6YJ">
+                                <rect key="frame" x="40" y="594" width="334" height="50"/>
                                 <color key="backgroundColor" red="0.8514554795" green="0.73688998289999996" blue="0.98410744859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7FZ-6u-wwv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onDomainClick:" destination="w4K-2k-75K" eventType="touchUpInside" id="1Zc-xh-63z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.81911628653853019" green="0.85514440109117107" blue="0.96692937612533569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,6 +101,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GfX-om-XAN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xlc-Hg-kdK"/>
                     <connections>
                         <outlet property="Geography" destination="akx-Ry-HGe" id="EQ3-td-ual"/>
                         <outlet property="Math" destination="smo-Im-v9K" id="NVe-Kh-zcM"/>
@@ -100,12 +110,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtf-md-HRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="-427"/>
+            <point key="canvasLocation" x="628.98550724637687" y="-427.23214285714283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SoundsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,7 +220,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="-427"/>
+            <point key="canvasLocation" x="1352.1739130434785" y="-427.23214285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WJB-HP-Ccn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TJm-LJ-NX4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lns-9k-W0w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4K-2k-75K" kind="relationship" relationship="rootViewController" id="3iR-LM-qJ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6TF-34-xMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="-427"/>
         </scene>
     </scenes>
 </document>

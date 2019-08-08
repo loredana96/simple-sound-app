@@ -17,11 +17,28 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        title = "Select Domain"
     }
 
+    @IBAction func onDomainClick(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SoundsViewController") as! ViewController
+        
+        switch sender.restorationIdentifier {
+        case "geography":
+            vc.title = "Geography"
+        case "math":
+            vc.title = "Math"
+        case "button":
+            vc.title = "Naiba Stie"
+        default: break
+        }
 
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
    
 }
 
